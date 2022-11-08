@@ -2,6 +2,8 @@ import Main from "../layouts/Main.jsx";
 import AllServices from "../Pages/AllServices/AllServices.jsx";
 import Blogs from "../Pages/Blogs/Blogs.jsx";
 import Home from "../Pages/Home/Home.jsx";
+import Login from "../Pages/Login/Login/Login.jsx";
+import Register from "../Pages/Login/Register/Register.jsx";
 const { createBrowserRouter } = require("react-router-dom");
 
 const router = createBrowserRouter([
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
       {
         path: "/allServices",
