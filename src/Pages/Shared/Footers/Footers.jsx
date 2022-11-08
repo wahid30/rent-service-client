@@ -6,17 +6,17 @@ const Footers = () => {
       <footer className="footer p-10 bg-base-200 text-base-content">
         <div>
           <span className="footer-title">Services</span>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <a className="link link-hover">Wifi</a>
+          <a className="link link-hover">Electricity</a>
+          <a className="link link-hover">Gas</a>
+          <a className="link link-hover">Water</a>
         </div>
         <div>
-          <span className="footer-title">Company</span>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <span className="footer-title">House</span>
+          <a className="link link-hover">WW Plaza</a>
+          <a className="link link-hover">Mini Mart</a>
+          <a className="link link-hover">Royal Vila</a>
+          <a className="link link-hover">SM Plaza</a>
         </div>
         <div>
           <span className="footer-title">Legal</span>
