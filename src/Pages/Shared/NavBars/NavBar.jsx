@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider";
 
 const NavBar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const [open, setOpen] = useState(false);
+  const handleLogOut = () => {
+    logOut();
+  };
   return (
     <div>
       <div className="navbar bg-slate-300">
