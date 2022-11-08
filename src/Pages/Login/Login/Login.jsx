@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useTitle from "../../../hooks/useTitle";
 
 const Login = () => {
@@ -37,9 +38,12 @@ const Login = () => {
                   className="input input-bordered"
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
+                  <Link
+                    to="/register"
+                    className="label-text-alt link link-hover text-red-800"
+                  >
+                    Sign Up?
+                  </Link>
                 </label>
               </div>
               <div className="form-control mt-6">
