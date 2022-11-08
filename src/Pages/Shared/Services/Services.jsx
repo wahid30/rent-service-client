@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import ServicesHome from "../ServicesHome/ServicesHome";
 
 const Services = () => {
@@ -21,6 +22,11 @@ const Services = () => {
         {catagories.slice(0, 3).map((category) => (
           <ServicesHome key={category._id} category={category}></ServicesHome>
         ))}
+      </div>
+      <div className="text-center mt-5">
+        <Link to="/allServices">
+          <button className="btn btn-primary">See All</button>
+        </Link>
       </div>
     </div>
   );
