@@ -1,4 +1,6 @@
 import React from "react";
+import "react-photo-view/dist/react-photo-view.css";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const ServicesHome = ({ category }) => {
   const { _id, name, img, details, rating, price } = category;
@@ -6,7 +8,16 @@ const ServicesHome = ({ category }) => {
     <div>
       <div className="card w-96 bg-base-100 shadow-xl ">
         <figure>
-          <img src={img} alt="Shoes" />
+          <PhotoProvider>
+            <PhotoView src={img}>
+              <img
+                className="h-full"
+                src={img}
+                style={{ objectFit: "cover" }}
+                alt=""
+              />
+            </PhotoView>
+          </PhotoProvider>
         </figure>
         <div className="card-body">
           <h2 className="card-title">
