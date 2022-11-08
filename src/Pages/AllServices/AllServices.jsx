@@ -6,7 +6,7 @@ const AllServices = () => {
   const data = useLoaderData();
   return (
     <div className="my-5">
-      <h1 className="text-center">All services are here</h1>
+      <h1 className="text-center my-5">All services are here</h1>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5">
         {data.map((dt) => (
           <AllServicesDetails key={dt._id} dt={dt}></AllServicesDetails>
