@@ -5,6 +5,7 @@ import Details from "../Pages/Details/Details.jsx";
 import Home from "../Pages/Home/Home.jsx";
 import Login from "../Pages/Login/Login/Login.jsx";
 import Register from "../Pages/Login/Register/Register.jsx";
+import UserReviews from "../Pages/UserReviews/UserReviews.jsx";
 const { createBrowserRouter } = require("react-router-dom");
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         element: <Details></Details>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/services/${params.id}`),
+      },
+      {
+        path: "/reviews",
+        element: <UserReviews></UserReviews>,
       },
     ],
   },

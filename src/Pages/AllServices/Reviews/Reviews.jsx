@@ -45,6 +45,7 @@ const Reviews = ({ service }) => {
   };
   return (
     <div className="my-5">
+      <h1 className="text-center my-4 text-3xl">Add Your Review for: {name}</h1>
       <form onSubmit={handlePlaceOrder}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <input
@@ -79,7 +80,7 @@ const Reviews = ({ service }) => {
           className="mt-3 textarea w-full textarea-bordered h-[140px]"
           placeholder="Your Message"
         ></textarea>
-        <input className="btn my-3" type="submit" value="Add Your Review" />
+        <input className="btn my-3" type="submit" value="Submit" />
       </form>
     </div>
   );
