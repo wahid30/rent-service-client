@@ -67,7 +67,7 @@ const UserReviews = () => {
                 <th>Delete</th>
                 <th>Name</th>
                 <th>Job</th>
-                <th>Favorite Color</th>
+                <th>Email</th>
                 <th>Message</th>
               </tr>
             </thead>

@@ -1,9 +1,21 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const UserReviewsRow = ({ review, handleDelete, handleReviewUpdate }) => {
-  const { _id, customer, message, photo, price, rating, serviceName, service } =
-    review;
+  const {
+    _id,
+    customer,
+    message,
+    status,
+    name,
+    photo,
+    email,
+    price,
+    rating,
+    serviceName,
+    service,
+  } = review;
   console.log(review);
   const [reviewService, setReviewsService] = useState({});
 
@@ -30,8 +42,8 @@ const UserReviewsRow = ({ review, handleDelete, handleReviewUpdate }) => {
             </div>
           </div>
           <div>
-            <div className="font-bold">{customer}</div>
-            <div className="text-sm opacity-50">{rating}</div>
+            <div className="font-bold">{name ? name : customer}</div>
+            <div className="text-sm opacity-50">{status}</div>
           </div>
         </div>
       </td>
@@ -40,14 +52,16 @@ const UserReviewsRow = ({ review, handleDelete, handleReviewUpdate }) => {
         <br />
         <span className="badge badge-ghost badge-sm">${price}</span>
       </td>
-      <td>Purple</td>
+      <td>{email}</td>
       <th>
-        <button
-          onClick={() => handleReviewUpdate(_id)}
-          className="btn btn-ghost btn-xs"
-        >
-          Update
-        </button>
+        <Link to={`/update/${_id}`}>
+          <button
+            onClick={() => handleReviewUpdate(_id)}
+            className="btn btn-ghost btn-xs"
+          >
+            Update
+          </button>
+        </Link>
       </th>
     </tr>
   );
