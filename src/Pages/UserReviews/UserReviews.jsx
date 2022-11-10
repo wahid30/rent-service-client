@@ -8,7 +8,9 @@ const UserReviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+    fetch(
+      `https://rent-services-server.vercel.app/reviews?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [user?.email]);
@@ -19,7 +21,7 @@ const UserReviews = () => {
       "Are you sure, you want to delete this review"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/reviews/${id}`, {
+      fetch(`https://rent-services-server.vercel.app/reviews/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -34,7 +36,7 @@ const UserReviews = () => {
     }
   };
   const handleReviewUpdate = (id) => {
-    fetch(`http://localhost:5000/reviews/${id}`, {
+    fetch(`https://rent-services-server.vercel.app/reviews/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

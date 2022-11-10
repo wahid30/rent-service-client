@@ -6,7 +6,7 @@ const UpdateReview = () => {
   const [user, setUser] = useState(storedUser);
   const handleUpdateUser = (event) => {
     event.preventDefault();
-    fetch(`http://localhost:5000/reviews/${storedUser._id}`, {
+    fetch(`https://rent-services-server.vercel.app/reviews/${storedUser._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
