@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const UserReviewsRow = ({ review, handleDelete, handleReviewUpdate }) => {
   const { _id, customer, message, photo, price, rating, serviceName, service } =
     review;
@@ -18,6 +19,7 @@ const UserReviewsRow = ({ review, handleDelete, handleReviewUpdate }) => {
           <button onClick={() => handleDelete(_id)} className="btn btn-ghost">
             X
           </button>
+          <ToastContainer />
         </label>
       </th>
       <td>

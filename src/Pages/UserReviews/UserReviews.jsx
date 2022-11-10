@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/AuthProvider";
 import UserReviewsRow from "../UserReviewsRow/UserReviewsRow";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const UserReviews = () => {
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
@@ -25,7 +26,7 @@ const UserReviews = () => {
         .then((data) => {
           console.log(data);
           if (data.deletedCount > 0) {
-            alert("Deleted Successfully");
+            toast("Deleted Successfully!!!");
             const remaining = reviews.filter((rv) => rv._id !== id);
             setReviews(remaining);
           }
@@ -54,7 +55,10 @@ const UserReviews = () => {
   };
   return (
     <div>
-      <h2 className="text-5xl">Total Review is: {reviews.length}</h2>
+      <h2 className="text-5xl">
+        Total Review is:{" "}
+        {reviews.length < 1 ? "No reviews were added" : reviews.length}
+      </h2>
       <div className="my-5">
         <div className="overflow-x-auto w-full">
           <table className="table w-full">
